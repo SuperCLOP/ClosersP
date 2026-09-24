@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>專題</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <div class="logo">專題</div>
+
+      <nav>
+        <a href="../index.html">首頁</a>
+        <a href="https://closersinfo.xyz/">封印者攻略網</a>
+
+    </nav>
+
+</header>
+
+
+<section class="character-page">
+
+    <div class="character-header">
+        <h2>專題 漂綠</h2>
+    </div>
+
+    <details open>
+        <summary>名詞解釋</summary>
+
+        <div class="info-section">
+            <p>漂綠指的是企業在環境、永續或社會責任的宣稱上看起來很正面，但實際表現可能沒有跟上，甚至只是「說得很漂亮、做得不夠好」。</p>
+            <div class="quote-block">
+                <p>公司說：『我們積極推動低碳轉型』</p>
+                <p>但你可以再問：它真的減少了碳排放嗎？還是只是寫在年報裡而已？</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+
+            <div class="sub-section">
+                <h4>① E：Environmental（環境）</h4>
+                <p>這部分看的是公司對環境造成什麼影響，例如：</p>
+                <ul class="check-list">
+                    <li>溫室氣體／碳排放</li>
+                    <li>能源使用</li>
+                    <li>水資源</li>
+                    <li>廢棄物</li>
+                    <li>再生能源使用</li>
+                </ul>
+                <div class="quote-block">
+                    <p>例如一家公司在年報寫：『本公司積極推動低碳轉型，致力於降低碳排放。』</p>
+                    <p>這是 E 的資訊揭露，但你也可以再追問：它今年到底排多少碳？去年是多少？有沒有真的下降？</p>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h4>② S：Social（社會）</h4>
+                <p>這部分看的是公司「怎麼對待人」。例如員工、消費者與供應鏈。</p>
+                <ul class="check-list">
+                    <li>員工薪資與工作環境</li>
+                    <li>職業安全</li>
+                    <li>勞工權益</li>
+                    <li>性別平等</li>
+                    <li>產品安全與個資保護</li>
+                </ul>
+                <div class="quote-block">
+                    <p>公司寫：『我們重視員工福祉，打造友善職場。』</p>
+                    <p>這也是 S 的內容，但實際上要看工安事故、員工流動率、勞資爭議是否真的改善。</p>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h4>③ G：Governance（公司治理）</h4>
+                <p>這部分關注的是公司到底有沒有被好好管理，重點通常是：</p>
+                <ul class="check-list">
+                    <li>董事會結構</li>
+                    <li>獨立董事</li>
+                    <li>股東權益</li>
+                    <li>內部控制</li>
+                    <li>風險管理與財務透明度</li>
+                </ul>
+                <div class="quote-block">
+                    <p>公司宣稱：『我們具有完善的公司治理制度。』</p>
+                    <p>你可以去查董事會是否獨立、是否有重大內控缺失、是否有違法事件或財報重編。</p>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="info-section">
+            <h3>CEPS</h3>
+            <p>如果你是在會計、財務或公司研究的脈絡看到 <strong>CEPS</strong>，通常是：</p>
+            <div class="quote-block">
+                <p><strong>CEPS = Cash Earnings Per Share</strong></p>
+                <p><strong>每股現金盈餘</strong></p>
+            </div>
+            <div class="note-box">
+                <strong>公司每一股股票，實際產生了多少「現金性質的盈餘」。</strong>
+            </div>
+
+            <div class="sub-section">
+                <h4>EPS vs. CEPS</h4>
+                <p><strong>EPS</strong>：Earnings Per Share，每股盈餘，關注會計上的盈餘。</p>
+                <p><strong>CEPS</strong>：Cash Earnings Per Share，每股現金盈餘，關注現金性質的獲利能力。</p>
+                
+                <div class="note-box">
+                    <strong>「這家公司每一股到底產生多少現金性質的獲利能力？」</strong>
+                </div>
+            </div>
+        </div>
+
+
+</section>
+
+    </main>
+
+</div>
+<script>
+function toggleMenu(){
+    document.querySelector(".sidebar").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
+<script>
+function showSkill(event,type){
+
+    document.getElementById("active").style.display="none";
+    document.getElementById("passive").style.display="none";
+
+    document.getElementById(type).style.display="block";
+
+    document.querySelectorAll(".tab-btn").forEach(btn=>{
+        btn.classList.remove("active");
+    });
+
+    event.currentTarget.classList.add("active");
+}
+</script>
